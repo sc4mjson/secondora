@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Secondora</title>
+    <style>
+        /* Genel Tema */
+        * {
+            box-sizing: border-box;
+            /* Tüm elemanlarda padding + border dahil */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f0f14;
+            color: #ddd;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Container */
+        .container {
+            max-width: 600px;
+            width: 95%;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: #1e1e2f;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(124, 92, 255, 0.3);
+            text-align: center;
+        }
+
+        /* Başlık ve paragraf */
+        h1 {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+
+        input,
+        textarea,
+        button {
+            width: 100%;
+            font-size: 16px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        input,
+        textarea {
+            padding: 14px;
+            background-color: #0f0f14;
+            color: #fff;
+            resize: vertical;
+        }
+
+        button {
+            padding: 14px;
+            background-color: #7c5cff;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #5a3ecf;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            color: #7c5cff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: #888;
+        }
+
+        footer a {
+            color: #7c5cff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Toast Stil */
+        .toast {
+            visibility: hidden;
+            min-width: 200px;
+            background-color: #7c5cff;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(0);
+            z-index: 1000;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .toast.show {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(-50%) translateY(-20px);
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                margin: 20px 10px;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            input,
+            textarea,
+            button {
+                font-size: 14px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Send us a message using the form below.</p>
+
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Name Surname" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+        <a href="index.html" class="back-home">← Back to Home</a>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast">Mesaj gönderildi!</div>
+
+    <footer>
+        <p>© 2026 Secondora.com</p>
+        <a href="privacy.html">Privacy Policy</a>
+    </footer>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const toast = document.getElementById('toast');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // Formun normal submit olmasını engelle
+
+            // Toast'u göster
+            toast.classList.add('show');
+
+            // 3 saniye sonra toast'u gizle
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+
+            // Formu sıfırla
+            form.reset();
+        });
+    </script>
+
+</body>
+
+</html>
