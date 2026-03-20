@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Secondora</title>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #0f0f14;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 0 20px 40px 20px;
+        }
+
+        /* Logo */
+        .logo-wrapper {
+            margin: 40px 0 30px 0;
+        }
+
+        .logo {
+            width: 250px;
+            transition: 0.7s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        /* About Card */
+        .about-card {
+            width: 100%;
+            max-width: 700px;
+            padding: 40px 30px;
+            border-radius: 24px;
+            background: rgba(124, 92, 255, 0.05);
+            /* Daha temayla uyumlu mor ton */
+            border: 1px solid rgba(124, 92, 255, 0.1);
+            box-shadow: 0 0 40px rgba(124, 92, 255, 0.2);
+            text-align: left;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .about-card:hover {
+            box-shadow: 0 0 60px rgba(124, 92, 255, 0.4);
+        }
+
+        .about-card h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .about-card h2 {
+            font-size: 22px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .about-card p {
+            color: #ccc;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .about-card a {
+            color: #7c5cff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .about-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer-container {
+            max-width: 1000px;
+            margin: 50px auto 20px auto;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #888;
+            font-size: 14px;
+        }
+
+        .footer-container a {
+            color: #7c5cff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .footer-container a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            .logo {
+                width: 180px;
+            }
+
+            .about-card {
+                padding: 25px 20px;
+                border-radius: 16px;
+            }
+
+            .about-card h1 {
+                font-size: 24px;
+            }
+
+            .about-card h2 {
+                font-size: 18px;
+            }
+
+            .about-card p {
+                font-size: 14px;
+            }
+
+            .footer-container {
+                padding: 15px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="logo-wrapper">
+        <img src="secondora.png" alt="Secondora Logo" class="logo">
+    </div>
+
+    <div class="about-card">
+
+        <h1>About Secondora</h1>
+
+        <p>
+            Secondora is a simple and fast online countdown timer designed for focus,
+            study sessions, productivity and everyday time management.
+        </p>
+
+        <p>
+            The goal of this project is to provide a clean and distraction-free timer
+            that works instantly in any browser without downloads or registrations.
+        </p>
+
+        <h2>Why Secondora?</h2>
+
+        <p>
+            Many online timers are overloaded with unnecessary features.
+            Secondora focuses on speed, simplicity and clarity so you can start your
+            focus session immediately.
+        </p>
+
+        <p>
+            Whether you are studying for exams, practicing the Pomodoro technique,
+            working on a task or exercising, Secondora helps you stay focused by making
+            time management simple and accessible.
+        </p>
+
+        <h2>Contact</h2>
+
+        <p>
+            If you have questions, suggestions or feedback, feel free to visit our
+            <a href="contact.html">Contact page</a>.
+        </p>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>© 2026 Secondora.com</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a> |
+                <a href="contact.html">Contact</a> |
+                <a href="privacy.html">Privacy Policy</a> |
+                <a href="about.html">About</a> |
+                <a href="pomodoro-technique.html">Pomodoro Technique Guide</a> |
+                <a href="how-to-focus.html">How to Stay Focused</a> |
+                <a href="productivity-tips.html">Productivity Tips for Students</a> |
+                <a href="how-to-stop-procrastinating.html">How to Stop Procrastinating</a> |
+                <a href="morning-routine.html">Morning Routine for Productivity</a> |
+                <a href="time-blocking.html">Time Blocking Method Guide</a> |
+                <a href="deep-work.html">Deep Work Explained</a> |
+                <a href="two-minute-rule.html">2-Minute Rule Explained</a> |
+                <a href="build-habits.html">How to Build Habits That Stick</a> |
+                <a href="phone-distractions.html">How to Avoid Phone Distractions</a> |
+                <a href="night-routine.html">Night Routine for Better Focus</a> |
+                <a href="daily-habits.html">Daily Habits of Successful People</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
